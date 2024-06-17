@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import SummaryApi from '../common'
+import BackendApi from '../common'
 import { toast } from 'react-toastify'
 import moment from 'moment'
 import { MdModeEdit } from "react-icons/md";
@@ -16,8 +16,8 @@ const AllUsers = () => {
     })
 
     const fetchAllUsers = async() =>{
-        const fetchData = await fetch(SummaryApi.allUser.url,{
-            method : SummaryApi.allUser.method,
+        const fetchData = await fetch(BackendApi.allUser.url,{
+            method : BackendApi.allUser.method,
             credentials : 'include'
         })
 

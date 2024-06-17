@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
 import  { useNavigate, useParams } from 'react-router-dom'
-import SummaryApi from '../common'
+import BackendApi from '../common'
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import displayCurrency from '../helpers/displayCurrency';
@@ -36,8 +36,8 @@ const ProductDetails = () => {
 
   const fetchProductDetails = async()=>{
     setLoading(true)
-    const response = await fetch(SummaryApi.productDetails.url,{
-      method : SummaryApi.productDetails.method,
+    const response = await fetch(BackendApi.productDetails.url,{
+      method : BackendApi.productDetails.method,
       headers : {
         "content-type" : "application/json"
       },

@@ -1,6 +1,8 @@
 const backend_url = "http://localhost:8080"
+const page = 1
+const limit = 10
 
-const SummaryApi = {
+const BackendApi = {
     signUP : {
         url : `${backend_url}/api/signup`,
         method : "post"
@@ -30,7 +32,7 @@ const SummaryApi = {
         method : 'post'
     },
     allProduct : {
-        url : `${backend_url}/api/get-product`,
+        url : `${backend_url}/api/get-product?page=${page}&limit=${limit}`,
         method : 'get'
     },
     updateProduct : {
@@ -80,4 +82,4 @@ const SummaryApi = {
 }
 
 
-export default SummaryApi
+export default BackendApi

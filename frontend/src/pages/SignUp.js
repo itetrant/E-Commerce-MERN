@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import loginIcons from '../assest/signin.gif'
+import loginIcons from '../assests/signin.gif'
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 import imageTobase64 from '../helpers/imageTobase64';
-import SummaryApi from '../common';
+import BackendApi from '../common';
 import { toast } from 'react-toastify';
 
 const SignUp = () => {
@@ -50,8 +50,8 @@ const SignUp = () => {
 
       if(data.password === data.confirmPassword){
 
-        const dataResponse = await fetch(SummaryApi.signUP.url,{
-            method : SummaryApi.signUP.method,
+        const dataResponse = await fetch(BackendApi.signUP.url,{
+            method : BackendApi.signUP.method,
             headers : {
                 "content-type" : "application/json"
             },

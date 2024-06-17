@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react'
-import loginIcons from '../assest/signin.gif'
+import loginIcons from '../assests/signin.gif'
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
-import SummaryApi from '../common';
+import BackendApi from '../common';
 import { toast } from 'react-toastify';
 import Context from '../context';
 
@@ -31,8 +31,8 @@ const Login = () => {
     const handleSubmit = async(e) =>{
         e.preventDefault()
 
-        const dataResponse = await fetch(SummaryApi.signIn.url,{
-            method : SummaryApi.signIn.method,
+        const dataResponse = await fetch(BackendApi.signIn.url,{
+            method : BackendApi.signIn.method,
             credentials : 'include',
             headers : {
                 "content-type" : "application/json"

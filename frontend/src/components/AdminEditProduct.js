@@ -5,7 +5,7 @@ import { FaCloudUploadAlt } from "react-icons/fa";
 import uploadImage from '../helpers/uploadImage';
 import DisplayImage from './DisplayImage';
 import { MdDelete } from "react-icons/md";
-import SummaryApi from '../common';
+import BackendApi from '../common';
 import {toast} from 'react-toastify'
 
 const AdminEditProduct = ({
@@ -66,13 +66,11 @@ const AdminEditProduct = ({
     
   }
 
-
-  {/**upload product */}
   const handleSubmit = async(e) =>{
     e.preventDefault()
     
-    const response = await fetch(SummaryApi.updateProduct.url,{
-      method : SummaryApi.updateProduct.method,
+    const response = await fetch(BackendApi.updateProduct.url,{
+      method : BackendApi.updateProduct.method,
       credentials : 'include',
       headers : {
         "content-type" : "application/json"

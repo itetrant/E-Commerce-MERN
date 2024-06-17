@@ -1,8 +1,8 @@
-const { default: SummaryApi } = require("../common")
+const { default: BackendApi } = require("../common")
 
 const fetchCategoryWiseProduct = async(category)=>{
-    const response = await fetch(SummaryApi.categoryWiseProduct.url,{
-        method : SummaryApi.categoryWiseProduct.method,
+    const response = await fetch(BackendApi.categoryWiseProduct.url,{
+        method : BackendApi.categoryWiseProduct.method,
         headers : {
             "content-type" : "application/json"
         },
