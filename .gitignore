@@ -1,0 +1,10 @@
+node_modules/
+.env
+*.pem
+*.cert
+*.cer
+*.key
+*.log
+
+frontend/.env
+backend/.env
