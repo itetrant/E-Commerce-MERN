@@ -61,7 +61,7 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div className='hidden lg:flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2'>
+            <div className='flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2'>
                 <input type='text' placeholder='search product here...' className='w-full outline-none' onChange={handleSearch} value={search}/>
                 <div className='text-lg min-w-[50px] h-8 bg-red-600 flex items-center justify-center rounded-r-full text-white'>
                   <GrSearch />
@@ -75,7 +75,7 @@ const Header = () => {
 
                   {
                     user?._id && (
-                      <div className='text-3xl cursor-pointer relative flex justify-center' onClick={()=>setMenuDisplay(preve => !preve)}>
+                      <div className='text-3xl cursor-pointer relative flex justify-center' onClick={() => setMenuDisplay(prev => !prev)}>
                         {
                           user?.profilePic ? (
                             <img src={user?.profilePic} className='w-10 h-10 rounded-full' alt={user?.name} />
@@ -89,11 +89,11 @@ const Header = () => {
                   
                   
                   {
-                    menuDisplay && (
+                    menuDisplay &&  (user?.role === ROLE.ADMIN || user?.role === ROLE.admin)  && (
                       <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded' >
                         <nav>
                           {
-                            user?.role === ROLE.ADMIN && (
+                            (
                               <Link to={"/admin-panel/all-products"} className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' onClick={()=>setMenuDisplay(preve => !preve)}>Admin Panel</Link>
                             )
                           }
@@ -105,17 +105,17 @@ const Header = () => {
                  
                 </div>
 
-                  {
-                     user?._id && (
-                      <Link to={"/cart"} className='text-2xl relative'>
-                          <span><FaShoppingCart/></span>
-      
-                          <div className='bg-red-600 text-white w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-3'>
-                              <p className='text-sm'>{context?.cartProductCount}</p>
-                          </div>
-                      </Link>
-                      )
-                  }
+                {
+                    user?._id && (
+                    <Link to={"/cart"} className='text-2xl relative'>
+                        <span><FaShoppingCart/></span>
+    
+                        <div className='bg-red-600 text-white w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-3'>
+                            <p className='text-sm'>{context?.cartProductCount}</p>
+                        </div>
+                    </Link>
+                    )
+                }
               
 
 

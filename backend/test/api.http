@@ -1,0 +1,29 @@
+###test API
+POST http://localhost:8080/api/signup
+
+{
+    "name":"Tra",
+    "email":"ite.trant@gmail.com",
+    "password":"gold2018"
+}
+
+###test API
+POST http://localhost:8080/api/signin
+Content-Type: application/json
+
+{
+    "email":"ite.trant@gmail.com",
+    "password":"gold2018"
+}
+
+###test API
+GET http://localhost:8080/api/all-user
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZhOTc4YWQzZGVjM2ZlMGI3YmQzZTYiLCJlbWFpbCI6Iml0ZS50cmFudEBnbWFpbC5jb20iLCJpYXQiOjE3MTg0MTc0NzcsImV4cCI6MTcxODQ0NjI3N30.chEXdRkHEAsuVwwHwgZF9dlieAIzeptaByHPe3C7hFk
+
+###test API
+GET http://localhost:8080/api/user-details
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZhOTc4YWQzZGVjM2ZlMGI3YmQzZTYiLCJlbWFpbCI6Iml0ZS50cmFudEBnbWFpbC5jb20iLCJpYXQiOjE3MTg0MTc0NzcsImV4cCI6MTcxODQ0NjI3N30.chEXdRkHEAsuVwwHwgZF9dlieAIzeptaByHPe3C7hFk
+
+###test API
+GET http://localhost:8080/api/get-product
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjY5MWQ4M2UxNzlhMzcwNjFmNDNjZWYiLCJlbWFpbCI6Iml0ZS50cmFudEBnbWFpbC5jb20iLCJpYXQiOjE3MTgzNzQ4MTEsImV4cCI6MTcxODQwMzYxMX0.2Q1_gsIepvi57I7A71KVxi5L3H7XW4C8S24BgdyoiBE
