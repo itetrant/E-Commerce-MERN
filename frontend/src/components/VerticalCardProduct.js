@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import fetchCategoryWiseProduct from '../helpers/fetchCategoryWiseProduct'
 import displayCurrency from '../helpers/displayCurrency'
@@ -11,7 +12,8 @@ const VerticalCardProduct = ({category, heading}) => {
     const [loading,setLoading] = useState(true)
     const loadingList = new Array(13).fill(null)
 
-    const [scroll,setScroll] = useState(0)
+    // const [scroll,setScroll] = useState(0)
+    
     const scrollElement = useRef()
 
     const { fetchUserAddToCart } = useContext(Context)
